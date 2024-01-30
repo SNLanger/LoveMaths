@@ -5,7 +5,7 @@ for (let button of buttons) {button.addEventListener("click", function(){
         alert("You clicked Submit!");
     } else {
         let gameType =this.getAttribute("data-type");
-        alert('You clicked $(gameType)');
+        runGame(gameType);
     }
 })
 }
@@ -17,11 +17,11 @@ rungame("addition");
 function rungame(gameType) {
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
-    if(gametype ==="addition") {
+    if(gameType === "addition") {
         displayAdditionQuestion(num1, num2);
-    } else{
-        alert('Unknown game type: ${gameType}')
-        throw 'Unknown game type: ${gameType}. Aborting!'
+    } else {
+        alert('Unknown game type: ${gameType}');
+        throw 'Unknown game type: ${gameType}. Aborting!';
     }
 
 }
